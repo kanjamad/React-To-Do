@@ -3,15 +3,17 @@ import Todo from './Todo'
 
 class Todos extends Component {
     render(){
-
     let todos = this.props.todos.map( (todo) => {
         return (
-        <Todo
-        key={todo._id}
-        todo={todo}
-        deleteTodo={this.props.deleteTodo}/>
-        )
-})
+            <Todo
+            key={todo._id}
+            todo={todo}
+            deleteTodo={this.props.deleteTodo}
+            updateTodo={this.props.updateTodo} 
+            createTodo={this.props.createTodo} 
+                />
+            )
+    })
 
         return(
         <ul>
